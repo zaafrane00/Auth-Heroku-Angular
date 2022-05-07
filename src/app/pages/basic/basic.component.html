@@ -1,0 +1,50 @@
+<!--  Data binding : interpolation -->
+{{title}}
+<br>
+<b> {{date_naissance}}</b>
+<!-- pipe : reformulation de donnée | -->
+<br>
+<b> {{date_naissance | date}}</b>
+<br>
+<b> {{date_naissance | date:'dd-MM-yyy H:m:s'}}</b>
+
+<br>
+{{ age >= 18 ? 'majeur' : 'mineur'}}
+<br>
+<!-- isSelected != false != undefined != null != 0 -->
+<div *ngIf="isSelected ; else show_empty">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui corrupti eligendi cumque voluptatem. Excepturi pariatur
+  eveniet architecto numquam autem nostrum molestias rerum possimus dignissimos ullam beatae hic, soluta ab commodi!
+</div>
+<ng-template #show_empty>
+  empty state
+</ng-template>
+
+<table>
+  <tr>
+    <th>User name</th>
+    <th>E-mail</th>
+  </tr>
+  <tr *ngFor="let user of tab">
+    <td> {{user.nom}} </td>
+    <td>{{user.email}} </td>
+  </tr>
+</table>
+<div [ngSwitch]="etat">
+  <b *ngSwitchCase="0">en attente</b>
+  <b *ngSwitchCase="1">Accepter</b>
+  <b *ngSwitchCase="2">Réfuser</b>
+</div>
+<br>
+<!-- property binding -->
+<input  [value]="title"  [disabled]="isSelected" />
+<br> <br>
+
+<input  [value]="title"  (keyup.enter)="fn($event)"  />
+
+<br> <br>
+
+<input  [(ngModel)]="title"   />
+
+
+
