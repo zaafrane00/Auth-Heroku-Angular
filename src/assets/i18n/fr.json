@@ -1,0 +1,8 @@
+{
+    "title" :"Seance 1 ",
+    "text" : "Application Feedback",
+    "feedback" : {
+        "supp" : "Supprimer",
+        "mod" : "Modifier"
+    }
+}

@@ -4,20 +4,37 @@
     <div class="card">
         <ul class="rating">
             <li *ngFor="let i of nums">
-                <input type="radio" [(ngModel)]="rating"  [value]="i" [id]="i">
+                <input type="radio" [(ngModel)]="feedback.rating"  [value]="i" [id]="i">
                 <label [for]="i">{{i}}</label>
             </li>
            
         </ul>
         <div class="input-group">
-            <input [(ngModel)]="text">
+            <input [(ngModel)]="feedback.text">
           
             <button class="btn btn-secondary" (click)="add()">Send</button>
         </div>
     </div>
     <div class="card" *ngFor="let feedback of items; let i=index">
-        <div class="close" (click)="delete(i)">supprimer</div>
-        <h3 class="num-display">{{feedback.rating}}</h3>
+        <div class="close" (click)="delete(i)">{{'feedback.supp' | translate}}</div>
+
+        <div class="edit" (click)="edit(feedback)" >{{'feedback.mod' | translate}}</div>
+
+        <h3 class="num-display">{{feedback.rating}} </h3>
         <p>{{feedback.text}}</p>
     </div>
+
+
+
+    <input [(ngModel)]="content"> 
+    <br>
+    {{content}}
 </div>
+
+
+
+
+
+
+
+
