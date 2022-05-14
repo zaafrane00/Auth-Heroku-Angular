@@ -1,6 +1,6 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { BasicComponent } from './pages/basic/basic.component';
 import { FeedbackAppComponent } from './pages/feedback-app/feedback-app.component';
 import { TestComponent } from './test/test.component';
+import { SignupComponent } from './pages/signup/signup.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -20,12 +21,14 @@ export function createTranslateLoader(http: HttpClient) {
     AppComponent,
     BasicComponent,
     FeedbackAppComponent,
-    TestComponent
+    TestComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {

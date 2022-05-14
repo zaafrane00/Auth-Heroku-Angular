@@ -1,0 +1,25 @@
+
+
+<div class="container">
+    <div class="card">
+
+        <form [formGroup]="signupform">
+            <label>Name</label>
+            <input formControlName="name" class="input-group" >
+
+            <label>CIN</label>
+            <input formControlName="cin"  class="input-group">
+
+            <label>Email</label>
+            <input formControlName="email"  class="input-group">
+
+            <label>Password</label>
+            <input formControlName="password"  class="input-group">
+
+            <label>Confirm Password</label>
+            <input formControlName="confirm_password"  class="input-group">
+            <br>
+            <button type="submit" class="btn btn-secondary">Save</button>
+        </form>
+    </div>
+</div>
