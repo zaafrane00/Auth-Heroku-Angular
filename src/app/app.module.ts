@@ -11,6 +11,8 @@ import { BasicComponent } from './pages/basic/basic.component';
 import { FeedbackAppComponent } from './pages/feedback-app/feedback-app.component';
 import { TestComponent } from './test/test.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -30,6 +32,8 @@ export function createTranslateLoader(http: HttpClient) {
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule, 
+    ToastrModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,

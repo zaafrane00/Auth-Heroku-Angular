@@ -12,14 +12,23 @@
 
             <label>Email</label>
             <input formControlName="email"  class="input-group">
-
+            <small *ngIf="(signupform.get('email')?.dirty || signupform.get('email')?.touched )&& signupform.get('email')?.errors" style="color: red;">
+                {{signupform.get('email')?.errors?.['email'] 
+                ? 'invalid email format' 
+                : 'required field'}}
+            </small>
+            <br>
             <label>Password</label>
             <input formControlName="password"  class="input-group">
 
             <label>Confirm Password</label>
             <input formControlName="confirm_password"  class="input-group">
             <br>
-            <button type="submit" class="btn btn-secondary">Save</button>
+            <button [disabled]="!signupform.valid"  (click)="save()" type="submit" class="btn btn-secondary">Save</button>
+            <br>
+            {{signupform.valid}}
+            {{signupform.get('cin')?.errors | json}}
+       
         </form>
     </div>
 </div>
