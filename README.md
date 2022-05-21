@@ -1,6 +1,6 @@
-# AngularProject
+# Auth-Heroku-Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
+This project is meant to showcase authentication through a remote server mounted on Heroku
 
 ## Development server
 
