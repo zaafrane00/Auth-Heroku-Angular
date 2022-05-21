@@ -4,5 +4,6 @@
     "feedback" : {
         "supp" : "Supprimer",
         "mod" : "Modifier"
-    }
+    },
+    "wrong_password" : "Mot de passe invalide"
 }

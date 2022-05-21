@@ -1,8 +1,14 @@
-<h2> {{ 'title' | translate}} : {{'text' | translate}}</h2>
-<h2 *ngIf="translate.currentLang != 'fr' " (click)="changeLang('fr')"> Français</h2>
+<app-navbar></app-navbar>
+
+
+<!-- <h2> {{ 'title' | translate}} : {{'text' | translate}}</h2>
+ --><h2 *ngIf="translate.currentLang != 'fr' " (click)="changeLang('fr')"> Français</h2>
 <h2  *ngIf="translate.currentLang != 'en' " (click)="changeLang('en')"> Anglais</h2>
 <!--  <app-basic></app-basic>  -->
 <!--  <app-feedback-app></app-feedback-app> -->
 <!-- <vermeg-test></vermeg-test> -->
-<app-signup></app-signup>
+<!-- <app-signup></app-signup> -->
 <!-- https://github.com/workshop01/vermeg22 -->
+
+
+<router-outlet></router-outlet>

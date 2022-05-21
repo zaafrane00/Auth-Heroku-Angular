@@ -13,6 +13,11 @@ import { TestComponent } from './test/test.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Page404Component } from './pages/page404/page404.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { HeaderComponent } from './components/header/header.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { AdminModule } from './admin/admin.module';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -24,7 +29,11 @@ export function createTranslateLoader(http: HttpClient) {
     BasicComponent,
     FeedbackAppComponent,
     TestComponent,
-    SignupComponent
+    SignupComponent,
+    Page404Component,
+    ProfileComponent,
+    HeaderComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +49,7 @@ export function createTranslateLoader(http: HttpClient) {
           useFactory: (createTranslateLoader),
           deps: [HttpClient]
       }
-  })
+  }) , AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]

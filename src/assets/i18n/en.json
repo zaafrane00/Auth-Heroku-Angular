@@ -4,5 +4,6 @@
     "feedback" : {
         "supp" : "Delete",
         "mod" : "update"
-    }
+    },
+    "wrong_password" : "Invalid password"
 }
